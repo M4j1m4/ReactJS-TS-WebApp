@@ -1,0 +1,137 @@
+.church-website {
+    font-family: Arial, sans-serif;
+    background-image: url(./images/6.jpg);
+    background-size: cover;
+  }
+  
+  .header {
+    padding: 20px;
+  }
+  
+  .header-title {
+    margin: 0;
+  }
+  
+  .header-nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between; /* Distribute links evenly */
+  }
+  
+  .header-nav-item {
+    margin-right: 20px;
+  }
+  
+  .header-nav-link {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .home-section,
+  .about-section,
+  .services-section,
+  .contact-section {
+    padding: 40px;
+    text-align: center;
+    max-width: 800px; /* Set a maximum content width */
+    margin: 0 auto; /* Center the content horizontally */
+  }
+  
+  .home-title {
+    color: #000;
+  }
+  
+  .services-title {
+    margin-bottom: 20px;
+    color: #ffd700;
+  }
+
+  .about-title {
+    color: #000;  
+  }
+  
+  .home-text,
+  .about-text {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .home-button,
+  .about-link {
+    background-color: #333;
+    color: #ffd700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Add hover effect */
+  }
+  
+  .home-button:hover {
+    background-color: #222; /* Change background color on hover */
+  }
+
+  .about-link:hover {
+    background-color: #222; /* Change background color on hover */
+  }
+  
+  
+  .services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .services-item {
+    margin: 10px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    width: 200px; /* Adjust the width as desired */
+    text-align: left; /* Align text to the left */
+    color: #ffd700;
+  }
+  
+  
+  .contact-info,
+  .contact-text {
+    margin: 10px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    color: #ffd700; 
+    font-size: 20px;
+  }
+  
+  .footer {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin: 0;
+  }
+  
+  .bg {
+    background-image: url(./images/1.png);  
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-title {
+    text-align: center;
+  }
+  
+  .ChurchLogo {
+    display: block;
+    margin: auto;
+    height: 100px;
+  }
