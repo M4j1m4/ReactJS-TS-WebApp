@@ -1,0 +1,47 @@
+/* aboutUs.css */
+.container {    
+    background-image: url(./images/7.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    margin-bottom: 20px; /* Adjusted to remove excess white space */
+}
+
+.section:last-child {
+    margin-bottom: 0; /* Ensures the last section doesn't have bottom margin */
+}
+
+.section h1 {
+    color: #feefc6;
+    margin-bottom: 10px; /* Adjust the margin if needed */
+}
+
+.section p {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000000;
+    margin-bottom: 10px; /* Adjusted to reduce excess white space */
+}
+
+.section p:first-of-type {
+    font-style: italic;
+}
+
+.section p:last-of-type {
+    margin-bottom: 0; /* Removes excess white space after the last paragraph */
+}
