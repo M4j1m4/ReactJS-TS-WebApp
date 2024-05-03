@@ -1,8 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './AdminPanel.css';
 
-
 const AdminPanel: React.FC = () => {
+  const [backendData, setBackendData] = useState({ homeContent: [] });
+
+  useEffect(() => {
+      fetch("/api")
+          .then(response => response.json())
+          .then(data => {
+              setBackendData(data);
+          })
+          .catch(error => {
+              console.error('Error fetching data:', error);
+          });
+  }, []);
+
     const [headerTitle, setHeaderTitle] = useState('');
     const [homeTitle, setHomeTitle] = useState('');
     const[ sundayServices, setSundayServices] = useState('');
@@ -14,7 +26,6 @@ const AdminPanel: React.FC = () => {
     const[ specialEvents, setSpecialEvents] = useState('');
     const[ address, setAddress] = useState('');
     const[ contacts, setContacts] =useState('');
-
  
     const handleUpdate = () => {
       const updatedData = {
@@ -154,7 +165,22 @@ const AdminPanel: React.FC = () => {
               <button className="button" onClick={handleUpdate}><span className="button-content">Update Content</span></button>
             </div>
           </div>
+          <div className="mailing-info">
+            <h2 className="mailing-info-header">Mailing Info</h2>
+            <div className="mailing-info-item">
+              <strong>Name:</strong> {backendData.homeContent?.[11] || 'No name provided'}
+            </div>
+            <div className="mailing-info-item">
+              <strong>Email:</strong> {backendData.homeContent?.[12] || 'No email provided'}
+            </div>
+            <div className="mailing-info-item">
+              <strong>Subject:</strong> {backendData.homeContent?.[13] || 'No subject provided'}
+            </div>
+            <div className="mailing-info-item">
+              <strong>Message:</strong> {backendData.homeContent?.[14] || 'No message provided'}
+            </div>
           </div>
+        </div>
     )
 }
 

@@ -5,6 +5,7 @@ import DonationForm from './DonationForm';
 import AdminPanel from './AdminPanel';
 import AboutUs from './AboutUs';
 import ChatBot from 'react-simple-chatbot';
+import PrayWithUs from './PWU';
 
 const chatbotSteps = [
     {
@@ -18,22 +19,28 @@ const chatbotSteps = [
             { value: 'prayer', label: 'Request a prayer', trigger: 'prayer' },
             { value: 'info', label: 'Get information', trigger: 'info' },
             { value: 'donate', label: 'Donate', trigger: 'donate' },
+            { value: 'contact', label: 'Contact Us', trigger: 'contact'},
         ],
     },
     {
         id: 'prayer',
-        message: 'Please tell us your prayer request.',
-        end: true,
+        message: '"You also, like living stones, are being built into a spiritual house to be a holy priesthood, offering spiritual sacrifices acceptable to God through Jesus Christ."1 Peter 2:5 (NIV)',
+        trigger: 'options',
     },
     {
         id: 'info',
-        message: 'What information would you like to know?',
-        end: true,
+        message: 'Christ, the Living Stone Fellowship (CLSF) is a Christ-centered church, encouraging one another as one family, transforming individuals, communities and nations through the proclamation of the Gospel of the Kingdom of God.',
+        trigger: 'options',
     },
     {
         id: 'donate',
         message: 'You can donate using the donate button on the website.',
-        end: true,
+        trigger: 'options',
+    },
+    {
+        id: 'contact',
+        message: 'You can click the Pray With Us option and get on our mailing list.',
+        trigger: 'options',
     },
 ];
 
@@ -77,7 +84,7 @@ const ChurchWebsite: React.FC = () => {
                                 <li className="header-nav-item"><Link to="/admin"><span className="transition"></span><span className="gradient"></span><span className="label">ADMIN</span></Link></li>
                             </button>
                             <button>
-                                <li className="header-nav-item"><a href="#contact"><span className="transition"></span><span className="gradient"></span><span className="label">PRAY WITH US</span></a></li>
+                                <li className="header-nav-item"><Link to="/praywithus"><span className="transition"></span><span className="gradient"></span><span className="label">PRAY WITH US</span></Link></li>
                             </button>
                         </ul>
                     </nav>
@@ -128,18 +135,14 @@ const ChurchWebsite: React.FC = () => {
                                         <dt><b>SPECIAL EVENTS</b></dt>
                                         <dd><p className="indent">{backendData.homeContent?.[8]}</p></dd>
                                     </div>  
-                                    <div>
-                                        <button className="chatbot-toggle" onClick={toggleChatbot}>
-                                            {isChatbotOpen ? 'Close Chatbot' : 'Open Chatbot'}
-                                        </button>
-
-                                        {/* Chatbot component */}
-                                        {isChatbotOpen && (
-                                            <div className="chatbot-container">
-                                                <ChatBot steps={chatbotSteps} />
-                                            </div>
-                                        )}
-                                    </div>
+                                    <button className="chatbot-toggle" onClick={toggleChatbot}>
+                                        {isChatbotOpen ? 'Close Chatbot' : 'Open Chatbot'}
+                                    </button>
+                                    {isChatbotOpen && (
+                                        <div className="chatbot-container">
+                                            <ChatBot steps={chatbotSteps} />
+                                        </div>
+                                    )}
                                 </dl>
                                 </section>  
                                 <section id="contact" className="contact-section">
@@ -153,6 +156,7 @@ const ChurchWebsite: React.FC = () => {
                         <Route path="/donate" element={<DonationForm></DonationForm>} />
                         <Route path="/admin" element={<AdminPanel></AdminPanel>} />
                         <Route path="/about" element={<AboutUs></AboutUs>} />
+                        <Route path="/praywithus" element={<PrayWithUs></PrayWithUs>} />
                     </Routes>
                 </main>
             </div>

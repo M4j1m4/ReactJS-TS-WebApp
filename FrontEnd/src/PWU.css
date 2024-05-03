@@ -1,0 +1,64 @@
+/* PWU.css */
+.contain {
+    background-image: url(./images/9.jpg);
+    background-size: cover;
+    padding: 20px; /* Optional padding around the container */
+}
+
+.center {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+.loc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mailing-form {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center;
+    width: 100%; /* Optional, adjust the width */
+    max-width: 600px; /* Optional maximum width */
+    margin: auto; /* Centers the form horizontally */
+    padding: 20px; /* Padding inside the form container */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-top: 20px; /* Margin above the form */
+}
+
+/* Styling for input fields */
+.email-input,
+.message-input {
+    width: 80%; /* Adjust the width as needed */
+    padding: 10px; /* Optional padding for comfort */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Optional border style */
+    margin-bottom: 10px; /* Margin bottom between inputs */
+}
+
+/* Increase the height of the message input field */
+.message-input {
+    height: 150px; /* Adjust the height as needed */
+    resize: vertical; /* Allows vertical resizing if desired */
+}
+
+/* Styling for the submit button */
+.submit-button {
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 80%; /* Make the button the same width as the input */
+}
+
+
+.submit-button:hover {
+    background-color: #0056b3;
+}

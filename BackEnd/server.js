@@ -7,7 +7,7 @@ app.use(express.json());
 let homeContent = ["Christ, The Living Stone Fellowship University Belt", "WELCOME TO OUR CHURCH",
 "9 a.m.-11 a.m., we welcome you to praise God each Sunday.", "Evangelism every Wed & Fri, Discipleship Training, Cell Group", 
 "Evangelism, Discipleship Training, Cell Group", "3-5pm CSS Payatas Service", "Worship Team", "Wed 5-8pm @CLSF Ubelt, Wed 9-12mid @CLSF Mandaluyong, Thu 7-9pm @CLSF Mandaluyong",
-"Encounter with God Retreat", "3rd Floor Orient Pearl Building, Recto Ave, Manila", "734315 / +63 9204779351 / admin@clsfubeltor.org"];
+"Encounter with God Retreat", "3rd Floor Orient Pearl Building, Recto Ave, Manila", "734315 / +63 9204779351 / admin@clsfubeltor.org", "Lebron James", "lebronjames123@gmail.com", "Praying", "Hello! Christ, the Living Stone Fellowship University Belt I want to get to know more of God"];
 
 // API endpoint
 app.get("/api", (req, res) => {
@@ -16,7 +16,7 @@ app.get("/api", (req, res) => {
 
 // Update content endpoint
 app.post('/api/update', (req, res) => {
-  const { headerTitle, homeTitle, sundayServices, campusMinistry, yuppiesMinistry, commmunityService, supportMinistry, prayerMeeting, specialEvents, address, contacts } = req.body;
+  const { headerTitle, homeTitle, sundayServices, campusMinistry, yuppiesMinistry, commmunityService, supportMinistry, prayerMeeting, specialEvents, address, contacts, name, email, subject, message } = req.body;
 
   // Update the homeContent array
   homeContent = [
@@ -31,13 +31,13 @@ app.post('/api/update', (req, res) => {
     specialEvents || homeContent[8],
     address || homeContent[9],
     contacts || homeContent[10],
+    name || homeContent[11],
+    email || homeContent[12],
+    subject || homeContent[13],
+    message || homeContent[14],
   ];
 
   res.json({ message: 'Content updated successfully' });
-});
-
-app.get("/api", (req, res) => {
-  res.json({ "homeContent": homeContent });
 });
 
 // Start the server

@@ -204,26 +204,26 @@
   }
 
   /* Chatbot container styling */
-.chatbot-container {
-  position: fixed;
-  bottom: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 1000;
-  width: 300px; /* Adjust as needed */
-  height: auto;
-}
-
-/* Chatbot toggle button styling */
-.chatbot-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1001; /* Make sure the button is on top of other elements */
-  padding: 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  .chatbot-container {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000;
+    width: 300px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  /* Chatbot toggle button styling */
+  .chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001; /* Make sure the button is on top of other elements */
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
