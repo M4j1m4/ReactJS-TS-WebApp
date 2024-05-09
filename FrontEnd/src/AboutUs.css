@@ -3,6 +3,7 @@
     background-image: url(./images/7.jpg);
     background-size: cover;
     text-align: center;
+    height: 80vh;
 }
 
 .title {
@@ -34,7 +35,7 @@
     font-family: 'Arial', sans-serif;
     font-size: 20px;
     line-height: 1.5;
-    color: #000000;
+    color: #fff;
     margin-bottom: 10px; /* Adjusted to reduce excess white space */
 }
 

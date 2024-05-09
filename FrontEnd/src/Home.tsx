@@ -6,6 +6,7 @@ import AdminPanel from './AdminPanel';
 import AboutUs from './AboutUs';
 import ChatBot from 'react-simple-chatbot';
 import PrayWithUs from './PWU';
+import LoginForm from './AdminLogin';
 
 const chatbotSteps = [
     {
@@ -61,10 +62,9 @@ const ChurchWebsite: React.FC = () => {
 
     const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
-    // Define the toggleChatbot function
     const toggleChatbot = () => {
         setIsChatbotOpen(!isChatbotOpen);
-    };
+    }; 
 
     return (
         <Router>
@@ -102,7 +102,7 @@ const ChurchWebsite: React.FC = () => {
                                     <section id="services" className="services-section">
                                     <h2 className="services-title"><i>GET INVOLVED. BE A MINISTER.</i></h2>
                                     <dl className="services-list">
-                                    <div className="services-item">x
+                                    <div className="services-item">
                                         <dt><b>SUNDAY SERVICES</b></dt>
                                         <dd><p className="indent">{backendData.homeContent?.[2]}</p></dd>
                                     </div>
@@ -154,7 +154,8 @@ const ChurchWebsite: React.FC = () => {
                             </>
                         } />
                         <Route path="/donate" element={<DonationForm></DonationForm>} />
-                        <Route path="/admin" element={<AdminPanel></AdminPanel>} />
+                        <Route path="/admin" element={<LoginForm></LoginForm>} />
+                        <Route path="/adminPanel" element={<AdminPanel></AdminPanel>} />
                         <Route path="/about" element={<AboutUs></AboutUs>} />
                         <Route path="/praywithus" element={<PrayWithUs></PrayWithUs>} />
                     </Routes>
@@ -165,3 +166,7 @@ const ChurchWebsite: React.FC = () => {
 };
 
 export default ChurchWebsite;
+
+
+
+

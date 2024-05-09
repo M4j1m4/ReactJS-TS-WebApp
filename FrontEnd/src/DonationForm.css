@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .donation-form {
     width: 500px; /* Adjust width as needed */
     margin: 10px auto; /* Center the form */
@@ -56,5 +62,5 @@
   }
 
   .donation-form img {
-    width: 46vh;  
+    width: 47vh;  
   }

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './PWU.css';
 
 const PrayWithUs: React.FC = () => {
-    // State to manage the email input
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [subject, setSubject] = useState('');
@@ -10,8 +9,8 @@ const PrayWithUs: React.FC = () => {
 
     const handleUpdate = () => {
         const updatedData = {
-          email: email || undefined, // Send headerTitle if it's not empty, otherwise send undefined
-          name: name || undefined, // Send homeTitle if it's not empty, otherwise send undefined
+          email: email || undefined,
+          name: name || undefined, 
           subject: subject || undefined,
           message: message || undefined,
         };
@@ -26,11 +25,9 @@ const PrayWithUs: React.FC = () => {
             .then((response) => response.json())
             .then((data) => {
               console.log('Update successful:', data);
-              // You can optionally reset the input fields or show a success message
             })
             .catch((error) => {
               console.error('Error updating data:', error);
-              // Show an error message or handle the error as needed
             });
         };
 
@@ -83,3 +80,11 @@ const PrayWithUs: React.FC = () => {
 }
 
 export default PrayWithUs;
+
+
+
+
+
+
+
+

@@ -11,7 +11,6 @@ const DonationForm: React.FC = () => {
 
   const handleDonationSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Add the logic to process the donation, such as integrating with a payment gateway
     console.log(`Donation amount: ${donationAmount}`);
   };
 
@@ -43,3 +42,5 @@ const DonationForm: React.FC = () => {
 };
 
 export default DonationForm;
+
+
